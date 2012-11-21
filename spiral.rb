@@ -1,10 +1,10 @@
 def spiral(root)
-  x,y = [0,0]
+  x,y = 0,0
   delta = [0, -1]
-  width, height = [root, root]
+  width, height = root, root
   result = []
 
-  (1..root**2).to_a.each do |i|
+  (1..root**2).each do |i|
     if ((-width/2 < x && x <= width/2) && (-height/2 < y && y <= height/2))
       result << [ x + root-1, y , i ]
     end
