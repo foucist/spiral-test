@@ -26,12 +26,11 @@ def spiral(root)
 
 end
 
-if input = ARGV.shift
-  input = input.to_i
-  root = Math.sqrt(input).to_i
-  if (root ** 2 == input)
-    spiral(root)
-  end
+input = ARGV.shift
+value = input.to_i
+root = Math.sqrt(value).to_i
+if input && (root ** 2 == value)
+  spiral(root)
 else
   puts "Please provide an integer value for a perfect square"
 end
