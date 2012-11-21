@@ -19,8 +19,9 @@ def spiral(root)
   end
 
   # output
-  result.map {|x| x[1] }.uniq.sort.reverse.each do |row|
-    puts result.select {|x| x[1] == row }.sort_by {|x| x.first }.map {|x| sprintf( "%*d" , (root**2).to_s.size , x.last)}.join(" ")
+  result.map {|x| x[1] }.uniq.sort.reverse.each do |col|
+    rows = result.select {|x| x[1] == col }.sort_by {|x| x.first }
+    puts rows.map {|x| sprintf( "%*d" , (root**2).to_s.size , x.last)}.join(" ")
     puts
   end
 
